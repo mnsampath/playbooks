@@ -1,0 +1,6 @@
+---
+# handlers file for set-roles.yml
+- name: service httpd started if not running
+  service:
+    name: httpd
+    state: started

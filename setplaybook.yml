@@ -1,0 +1,6 @@
+---
+- name: roles setup 
+  hosts: all
+  become: true
+  roles:
+   -  set-roles.yml

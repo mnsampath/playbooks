@@ -1,0 +1,11 @@
+---
+# tasks file for set-roles.yml
+- name: installing httpd
+  yum: 
+    name: httpd 
+    state: installed
+  notify : service httpd started if not running
+- name: copying file
+  copy:
+    src: /home/ram/index.html
+    dest: /var/www/html 
